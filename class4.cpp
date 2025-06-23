@@ -2,7 +2,7 @@
 using namespace std;
 class apple
 {
-    pub;ic:
+    public:
     int a;
     apple()
     {
