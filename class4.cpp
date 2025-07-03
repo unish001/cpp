@@ -1,28 +1,29 @@
 #include<iostream>
 using namespace std;
+
 class apple
 {
-    public:
+public:
     int a;
     apple()
     {
-        a=10;
+        a = 10;
     }
-    void dispaly()
+    void display()
     {
-        cout<<"A="<<a;
+        cout << "A = " << a << endl;
     }
     void operator++()
     {
         ++a;
     }
 };
+
 int main()
 {
     apple op;
-    op.dispaly();
-    ++op;
-    op.dispaly();
+    op.display();
+    ++op;        // Calls overloaded prefix ++ operator
+    op.display();
     return 0;
-
 }
