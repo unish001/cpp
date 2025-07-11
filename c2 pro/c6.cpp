@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-class Parent {
+class Parent
+ {
 public:
     void speak() {
         cout << "Hello from parent" << endl;
