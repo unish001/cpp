@@ -1,10 +1,9 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 float divide(int a, int b) {
     if (b == 0)
-        throw string("Division by zero is not allowed!");
+        throw "Division by zero is not allowed!";  // Throwing C-string
     return (float)a / b;
 }
 
@@ -15,7 +14,7 @@ int main() {
         float result = divide(x, y);
         cout << "Result: " << result << endl;
     }
-    catch (string e) {
+    catch (const char* e) {  // Catching C-string
         cout << "Exception caught: " << e << endl;
     }
 
