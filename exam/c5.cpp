@@ -1,5 +1,3 @@
-//10 mark mid term
-
 #include<iostream>
 using namespace std;
 class NPR
