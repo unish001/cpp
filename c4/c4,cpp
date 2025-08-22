@@ -1,0 +1,47 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name;
+    int age;
+
+    // Step 1: Take input from user
+    cout << "Enter your name: ";
+    getline(cin, name);
+    cout << "Enter your age: ";
+    cin >> age;
+
+    // Step 2: Write to file
+    ofstream outFile("userdata.txt");
+
+    if (!outFile) {
+        cout << "Error creating file!" << endl;
+        return 1;
+    }
+
+    outFile << "Name: " << name << endl;
+    outFile << "Age: " << age << endl;
+
+    outFile.close();
+    cout << "User data written to file successfully." << endl;
+
+    // Step 3: Read from file
+    ifstream inFile("userdata.txt");
+
+    if (!inFile) {
+        cout << "Error opening file for reading!" << endl;
+        return 1;
+    }
+
+    string line;
+    cout << "\nReading data from file:\n";
+    while (getline(inFile, line)) {
+        cout << line << endl;
+    }
+
+    inFile.close();
+
+    return 0;
+}
